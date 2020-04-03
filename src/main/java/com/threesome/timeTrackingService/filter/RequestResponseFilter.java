@@ -24,7 +24,7 @@ public class RequestResponseFilter extends OncePerRequestFilter implements Filte
         String requestBody = IOUtils.toString(request.getReader());
         LOG.info(request.getRequestURI() + " " + requestBody);
         filterChain.doFilter(request, response);
-        responseFilter.setHeader("Access-Control-Allow-Origin", "*");
+        responseFilter.setHeader("Access-Control-Allow-Origin", "*");;
     }
 
 }
